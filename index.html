@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Desafio Classificador de Herói</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
+    
+</head>
+<body class="body">
+    <h1 class="heading">Desafio Classificador de Herói</h1>
+    <div class="w-layout-blockcontainer container w-container">
+        <div class="content">
+            <p class="paragraph">Clique no botão abaixo para inserir o nome e o nível do herói:</p>
+            <button onclick="inserirDadosHeroi()">Inserir Dados do Herói</button>
+        </div>
+        <div class="javascriptcontent">
+            <!-- Aqui será exibido o resultado do JavaScript -->
+            <div class="Javascript"></div>
+        </div>
+    </div>
+
+    <script>
+        function inserirDadosHeroi() {
+            // Solicitar ao usuário o nome do herói
+            const heroName = prompt("Digite o nome do herói:");
+
+            // Verificar se o usuário cancelou a entrada
+            if (heroName === null) return;
+
+            // Solicitar ao usuário o nível do herói
+            let heroLevel;
+            do {
+                heroLevel = prompt("Digite o nível do herói (um número entre 1 e 10000):");
+            } while (heroLevel !== null && (isNaN(heroLevel) || heroLevel < 1 || heroLevel > 10000));
+
+            // Verificar se o usuário cancelou a entrada
+            if (heroLevel === null) return;
+
+            // Converter o nível para um número inteiro
+            heroLevel = parseInt(heroLevel);
+
+            // Verificar o nível do herói com base no valor inserido
+            let nivelDoHeroi;
+            let corDoHeroi;
+            if (heroLevel < 1000) {
+                nivelDoHeroi = "Ferro";
+                corDoHeroi = "#828282"; // Cinza
+            } else if (heroLevel >= 1001 && heroLevel <= 2000) {
+                nivelDoHeroi = "Bronze";
+                corDoHeroi = "#ff882d"; // Bronza
+            } else if (heroLevel >= 2001 && heroLevel <= 5000) {
+                nivelDoHeroi = "Prata";
+                corDoHeroi = "#d2dde0"; // Prata
+            } else if (heroLevel >= 5001 && heroLevel <= 7000) {
+                nivelDoHeroi = "Ouro";
+                corDoHeroi = "#e3c710"; // Verde
+            } else if (heroLevel >= 7001 && heroLevel <= 8000) {
+                nivelDoHeroi = "Platina";
+                corDoHeroi = "#c2beff"; // Roxo
+            } else if (heroLevel >= 8001 && heroLevel <= 9000) {
+                nivelDoHeroi = "Ascendente";
+                corDoHeroi = "#0ff1a2"; // Amarelo
+            } else if (heroLevel >= 9001 && heroLevel <= 10000) {
+                nivelDoHeroi = "Imortal";
+                corDoHeroi = "#4071f9"; // Cinza escuro
+            } else {
+                nivelDoHeroi = "Radiante";
+                corDoHeroi = "#f014c8"; // Turquesa
+            }
+
+            // Exibir mensagem com o nome e o nível do herói dentro da div com classe "Javascript"
+            const resultadoHTML = 
+            `<div style="text-align: center;">O Herói de nome </div><div style="font-weight:bold;">${heroName} está no nível de </div>
+            <div style="text-align: center; font-size: 2em; color: ${corDoHeroi}; text-shadow: 0 0 20px ${corDoHeroi};">
+                ${nivelDoHeroi}
+                </div>`;
+            document.querySelector(".Javascript").innerHTML = resultadoHTML;
+        }
+    </script>
+</body>
+</html>

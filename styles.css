@@ -1,0 +1,108 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+.w-layout-blockcontainer {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+@media screen and (max-width: 991px) {
+    .w-layout-blockcontainer {
+        max-width: 728px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .w-layout-blockcontainer {
+        max-width: none;
+    }
+}
+
+.heading {
+    aspect-ratio: auto;
+    -webkit-text-fill-color: inherit;
+    mix-blend-mode: normal;
+    object-fit: fill;
+    background-clip: border-box;
+    border-radius: 0;
+    margin-bottom: 0;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: block;
+    font-family: 'Gotham Rounded', sans-serif;
+}
+
+.body {
+    text-align: center;
+}
+
+.content {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 20px;
+}
+
+.paragraph {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.container {
+    max-width: 1400px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.javascriptcontent {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 100px;
+}
+
+/* Cores para cada nível */
+.Ferro {
+    color: #828282; /* Vermelho */
+}
+
+.Bronze {
+    color: #ff882d; /* Laranja */
+}
+
+.Prata {
+    color: #d2dde0; /* Azul */
+}
+
+.Ouro {
+    color: #e3c710; /* Verde */
+}
+
+.Platina {
+    color: #c2beff; /* Roxo */
+}
+
+.Ascendente {
+    color: #0ff1a2; /* Amarelo */
+}
+
+.Imortal {
+    color: #4071f9; /* Cinza escuro */
+}
+
+.Radiante {
+    color: #f014c8; /* Turquesa */
+}
