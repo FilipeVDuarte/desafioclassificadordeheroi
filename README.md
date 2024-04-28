@@ -37,7 +37,7 @@ Este é um projeto de código aberto e qualquer contribuição é bem-vinda. Se 
 
 ## Autor
 
-[Seu Nome] - [Seu Github](https://github.com/seu-usuario)
+Filipe Velasco Duarte - (https://github.com/FilipeVDuarte)
 
 ## Agradecimentos
 
